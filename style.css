@@ -2,8 +2,8 @@
     color:blue;
     display:flex;
     flex-wrap: wrap;
-    height: 64vw; /* Fill the viewport height */
-    width: 64vw; /* Fill the viewport width */
+    height: 32vw; /* Fill the viewport height */
+    width: 32vw; /* Fill the viewport width */
 }
 
 .grid-item {
