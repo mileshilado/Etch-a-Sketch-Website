@@ -1,0 +1,15 @@
+.grid-container {
+    color:blue;
+    display:flex;
+    flex-wrap: wrap;
+    height: 64vw; /* Fill the viewport height */
+    width: 64vw; /* Fill the viewport width */
+}
+
+.grid-item {
+    display:flex;
+    background-color: white;
+    border: 1px solid black;
+    width: calc(100% / 16 - 2px); /* 1/16th of the container width */
+    height: calc(100% / 16 - 2px); /* 1/16th of the container height */
+}
