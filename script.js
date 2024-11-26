@@ -27,8 +27,9 @@ function createGrid(size){
             const cell = document.createElement("div");
             cell.classList.add("grid-item"); // Add a class to the cell
             cell.textContent = ``; // Optional: Add coordinates as content
-            cell.style.width = `${640/size - 2}px`;
-            cell.style.height = `${640/size - 2}px`;
+            cell.style.width = `${960/size - 2}px`;
+            cell.style.height = `${960/size - 2}px`;
+            cell.style.backgroundColor = 'rgb(255,255,255)'
             container.appendChild(cell);
         }
     }
@@ -40,7 +41,12 @@ function createGrid(size){
         item.addEventListener("mousemove", function(){
             if(mousedown){
                 console.log('hovered')
-                item.style.backgroundColor = 'black'
+                currentrgb = item.style.backgroundColor
+                let rgbValues = currentrgb.match(/\d+/g);
+                let r = parseInt(rgbValues[0]) - 25.5;
+                let g = parseInt(rgbValues[1]) - 25.5;
+                let b = parseInt(rgbValues[2]) - 25.5;
+                item.style.backgroundColor = `rgb(${r},${g},${b})`;
             }
             
         })
