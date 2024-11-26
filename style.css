@@ -2,14 +2,12 @@
     color:blue;
     display:flex;
     flex-wrap: wrap;
-    height: 32vw; /* Fill the viewport height */
-    width: 32vw; /* Fill the viewport width */
+    height: 640px; /* Fill the viewport height */
+    width: 640px; /* Fill the viewport width */
 }
 
 .grid-item {
     display:flex;
     background-color: white;
     border: 1px solid black;
-    width: calc(100% / 16 - 2px); /* 1/16th of the container width */
-    height: calc(100% / 16 - 2px); /* 1/16th of the container height */
 }

@@ -20,11 +20,15 @@ gridPrompt.addEventListener("click", function(){
 createGrid(15)
 
 function createGrid(size){
+    container.innerHTML = ""
+    container.classList.add("grid-container")
     for(i=0;i!=size;i++){
         for(j=0;j!=size;j++){
             const cell = document.createElement("div");
             cell.classList.add("grid-item"); // Add a class to the cell
             cell.textContent = ``; // Optional: Add coordinates as content
+            cell.style.width = `${640/size - 2}px`;
+            cell.style.height = `${640/size - 2}px`;
             container.appendChild(cell);
         }
     }
@@ -36,7 +40,7 @@ function createGrid(size){
         item.addEventListener("mousemove", function(){
             if(mousedown){
                 console.log('hovered')
-                item.style.backgroundColor = "black"
+                item.style.backgroundColor = 'black'
             }
             
         })
